@@ -16,6 +16,10 @@
   <view class="usermotto">
     <view bindtap="toGame">
       <text class="user-motto">{{motto}}</text>
+      
     </view>
   </view>
 </view>
+<view>{{newfield.text}}</view>
+
+<button bindtap="addnewfield"> add new field</button>

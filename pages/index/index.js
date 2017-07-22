@@ -3,7 +3,7 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
+    motto: 'wo kan ni bianbubian',
     userInfo: {},
     arr:[[1,1,1,1],[2,2,2,2],[3,3,3,3]]
   },
@@ -27,6 +27,17 @@ Page({
   toGame:function(){
     wx.navigateTo({
       url: '../snake/snake'
+    })
+  },
+  addnewfield:function(){
+    this.outersetData();
+    this.setData({
+      "newfield.text":"here is after outersetData"
+    });
+  },
+  outersetData:function(){
+    this.setData({
+      "newfield.text":"can this message display???"
     })
   }
 })

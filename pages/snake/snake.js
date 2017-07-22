@@ -228,7 +228,7 @@ Page({
     //if(check){
     ground[x][y] = 1;
     //}
-    //console.log("at changeleft");
+    console.log("at changeright after checkgame");
     this.setData({
       snake:arr,
       ground:ground
@@ -297,10 +297,12 @@ Page({
     //检测是否碰到墙壁
     if(snakeHead[0] < 0 || snakeHead[0]>=this.data.rows ||
        snakeHead[1] < 0 || snakeHead[1]>=this.data.cols){
-         //console.log("at clearInterval");
+         console.log("at clearInterval");
          clearInterval(this.data.timer);
+         ground[0][0] = 2;
          this.setData({
            modalHidden:false,
+           ground:ground
          });
          return false;
        }
